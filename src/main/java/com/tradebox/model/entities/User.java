@@ -1,4 +1,4 @@
-package com.tradebox.model;
+package com.tradebox.model.entities;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,11 +10,10 @@ import java.util.Set;
 @Entity
 @Table(name = "tb_users")
 @Data
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(of = "id")
 public class User {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
     private Long id;
     private String name;
     private String email;
