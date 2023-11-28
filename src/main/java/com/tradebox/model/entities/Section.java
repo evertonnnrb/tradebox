@@ -14,9 +14,14 @@ public class Section {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+
     private String description;
+
     private Integer position;
+
+    @Column(columnDefinition = "TEXT")
     private String imgUri;
 
     @ManyToOne

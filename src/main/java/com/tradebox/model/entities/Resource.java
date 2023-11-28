@@ -18,11 +18,19 @@ public class Resource {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+
+    @Column(columnDefinition = "TEXT")
     private String description;
+
     private Integer position;
+
+    @Column(columnDefinition = "TEXT")
     private String imgUri;
+
     private ResourceType type;
+
     private String externalLink;
 
     @ManyToOne

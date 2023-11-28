@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -21,10 +22,10 @@ public class Enrollment {
     @Setter(AccessLevel.NONE) @Getter(AccessLevel.NONE)
     private EnrollmentPK id = new EnrollmentPK();
 
-    //@Column(columnDefinition = "TIMESTAMP WHITOUT TIME ZONE")
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant enrollMoment;
 
-    //@Column(columnDefinition = "TIMESTAMP WHITOUT TIME ZONE")
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant refundMoment;
 
     private boolean available;
