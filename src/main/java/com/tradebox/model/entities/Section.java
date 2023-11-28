@@ -5,16 +5,12 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Entity
-@Table(name = "tb_resources")
+@Table(name = "tb_sections")
 @Data
 @EqualsAndHashCode(of = "id")
-public class Resource {
+public class Section {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,13 +18,12 @@ public class Resource {
     private String description;
     private Integer position;
     private String imgUri;
-    private ResourceType type;
-    private String externalLink;
 
     @ManyToOne
-    @JoinColumn(name = "offer_id")
-    private Offer offer;
+    @JoinColumn(name = "resource_id")
+    private Resource resource;
 
-    @OneToMany(mappedBy = "resource")
-    private Set<Section> sections = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "prerequisite_id")
+    private Section prerequisite;
 }

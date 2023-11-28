@@ -27,3 +27,7 @@ INSERT INTO tb_resources (title, description, position, img_uri, type, external_
 INSERT INTO tb_resources (title, description, position, img_uri, type, external_link, offer_id) VALUES ('JS level two','Development a dinamic wev',1, 'img gray uri',2,'link external',3);
 INSERT INTO tb_resources (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Lambdas with java','Lambdas',2, 'img gray uri',2,'link external',2);
 INSERT INTO tb_resources (title, description, position, img_uri, type, external_link, offer_id) VALUES ('JS arrays ans vectors','Development snack game',3, 'img gray uri',0,'link external',4);
+
+INSERT INTO tb_sections (title, description, position,img_uri,resource_id,prerequisite_id) VALUES ('Bgining','init',1, 'img gray uri',1,null);
+INSERT INTO tb_sections (title, description, position,img_uri,resource_id,prerequisite_id) VALUES ('JS ','Init ',1, 'img gray uri',1,1);
+INSERT INTO tb_sections (title, description, position,img_uri,resource_id,prerequisite_id) VALUES ('JS arrays ans vectors','First step',1, 'img gray uri',1,2);
