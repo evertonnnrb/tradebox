@@ -31,3 +31,17 @@ INSERT INTO tb_resources (title, description, position, img_uri, type, external_
 INSERT INTO tb_sections (title, description, position,img_uri,resource_id,prerequisite_id) VALUES ('Bgining','init',1, 'img gray uri',1,null);
 INSERT INTO tb_sections (title, description, position,img_uri,resource_id,prerequisite_id) VALUES ('JS ','Init ',1, 'img gray uri',1,1);
 INSERT INTO tb_sections (title, description, position,img_uri,resource_id,prerequisite_id) VALUES ('JS arrays ans vectors','First step',1, 'img gray uri',1,2);
+
+INSERT INTO tb_enrollments (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07',null,true, false);
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ( 'One',1, 1);
+INSERT INTO tb_content(id, text_content, video_uri) VALUES (1, 'Material of ...','https://www.youtube.com/watch?v=bIPd');
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ( 'two',2, 2);
+INSERT INTO tb_content(id, text_content, video_uri) VALUES (2, 'Material of ...','https://www.youtube.com/watch?v=bIPd');
+
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ( 'three',3, 3);
+INSERT INTO tb_task(id, description, question_count, aproval_count,due_date,weight)values(1, 'desc task', 1,1,TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07',1.5);
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1,1,1);
