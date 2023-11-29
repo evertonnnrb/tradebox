@@ -49,3 +49,11 @@ INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1,1,1);
 INSERT INTO tb_notifications(text, moment, read, route, user_id) VALUES ('Feed back of task',TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07',false,'eimcoirmcrcr',1);
 
 INSERT INTO tb_delivered(uri,moment,status,feed_back,correct_count, offer_id, user_id, lesson_id)VALUES('https://www.gfelo.com',TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07', 0, 'Ok thats rigth',10,1,1,1);
+
+INSERT INTO tb_topic(title, body, moment, author_id, offer_id, lesson_id) VALUES ('Oh no', 'Someone can help me here',TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07',1,1,1);
+
+INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (1,1);
+
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Try restart your compter',now(), 1,1);
+
+-- INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (1,1);
