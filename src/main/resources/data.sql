@@ -45,3 +45,7 @@ INSERT INTO tb_lesson(title, position, section_id) VALUES ( 'three',3, 3);
 INSERT INTO tb_task(id, description, question_count, aproval_count,due_date,weight)values(1, 'desc task', 1,1,TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07',1.5);
 
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1,1,1);
+
+INSERT INTO tb_notifications(text, moment, read, route, user_id) VALUES ('Feed back of task',TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07',false,'eimcoirmcrcr',1);
+
+INSERT INTO tb_delivered(uri,moment,status,feed_back,correct_count, offer_id, user_id, lesson_id)VALUES('https://www.gfelo.com',TIMESTAMP WITH TIME ZONE '2023-07-13T20:50:07', 0, 'Ok thats rigth',10,1,1,1);
